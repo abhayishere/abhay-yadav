@@ -4,8 +4,11 @@ import { JetBrains_Mono } from 'next/font/google'
 const mono = JetBrains_Mono({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'Your Name - Software Engineer',
-  description: 'Personal portfolio of [Your Name]',
+  title: 'Abhay Yadav - Software Engineer',
+  description: 'Personal portfolio of Abhay Yadav',
+  icons: {
+    icon: '/file.svg'
+  },
 }
 
 export default function RootLayout({ children }) {
