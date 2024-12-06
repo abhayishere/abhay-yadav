@@ -13,13 +13,13 @@ export default function Home() {
 
         <p className="text-lg">
           I'm a software engineer passionate about web development, and a cp lover. 
-          
+
           Outside of coding, I enjoy badminton, chess, swimming, listening to music, playing ps5 and travelling.
         </p>
 
         <div className="mt-12">
         <h3 className="text-2xl text-gray-400 mb-4">
-            Here's my most recent posts or <Link href="/random" className="underline hover:text-gray-300">read a random one!</Link>
+            Here's my most recent posts or <Link href="/blog" className="underline hover:text-gray-300">read a random one!</Link>
           </h3>
         </div>
       </div>
