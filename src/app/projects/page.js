@@ -6,7 +6,7 @@ export default function Projects() {
       title: "SecondBrain",
       description: "Chrome extension with Firebase Authentication, Go-based RESTful API with Firestore, and a React web app.",
       tech: ["React", "Go", "Firebase", "RESTful API"],
-      link: "https://github.com/abhayishere/secondBrainFE"
+      link: "https://secondbrainweb.vercel.app/"
     },
     {
       title: "Tiny DCS",
