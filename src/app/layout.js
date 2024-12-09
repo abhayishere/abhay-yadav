@@ -1,7 +1,8 @@
 import './globals.css'
 import { JetBrains_Mono } from 'next/font/google'
 import GridBackground from './components/GridBackground'
-
+import { SpeedInsights } from '@vercel/speed-insights/next'
+import { Analytics } from "@vercel/analytics/react"
 const mono = JetBrains_Mono({ subsets: ['latin'] })
 
 export const metadata = {
@@ -20,6 +21,8 @@ export default function RootLayout({ children }) {
         <div className="relative z-0">
           {children}
         </div>
+        <SpeedInsights />
+        <Analytics />
       </body>
     </html>
   )
