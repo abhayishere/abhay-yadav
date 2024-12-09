@@ -36,7 +36,7 @@ export default function Header() {
         <Link href="https://github.com/abhayishere" className="hover:text-gray-400">
           <FaGithub />
         </Link>
-        <Link href="https://leetcode.com/u/bazzinga69" className="hover:text-[#FFA116]">
+        <Link href="https://leetcode.com/u/abhayadav/" className="hover:text-[#FFA116]">
           <SiLeetcode />
         </Link>
         <Link href="https://secondbrainweb.vercel.app" className="hover:text-green-400">
