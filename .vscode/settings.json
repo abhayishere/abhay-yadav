@@ -1,0 +1,8 @@
+{
+  "python.languageServer": "Pylance",
+  "python.defaultInterpreterPath": "${workspaceFolder}/scripts/.venv/bin/python",
+  "python.analysis.extraPaths": [
+    "scripts"
+  ],
+  "python-envs.pythonProjects": []
+}

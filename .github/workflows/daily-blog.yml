@@ -1,0 +1,41 @@
+name: Daily Blog Generator
+
+on:
+  schedule:
+    # 3:30 UTC = 9:00 AM IST
+    - cron: '30 3 * * *'
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install -r scripts/requirements.txt
+
+      - name: Run multi-agent blog pipeline
+        env:
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          SERPER_API_KEY: ${{ secrets.SERPER_API_KEY }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          REVIEW_SIGNING_SECRET: ${{ secrets.REVIEW_SIGNING_SECRET }}
+          SITE_URL: ${{ secrets.SITE_URL }}
+        run: python scripts/generate_blog.py
+
+      - name: Commit and push new pending post
+        run: |
+          git config user.name "blog-bot"
+          git config user.email "actions@github.com"
+          git add content/blogs.json
+          git diff --cached --quiet || git commit -m "chore: add new pending blog post"
+          git push
