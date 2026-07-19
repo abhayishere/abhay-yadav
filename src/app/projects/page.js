@@ -3,6 +3,24 @@ import Header from '../components/Header'
 export default function Projects() {
   const projects = [
     {
+      title: "AI Blog Pipeline",
+      description: "Planner → Writer → Editor multi-agent pipeline using LangGraph for stateful workflow orchestration, automated via GitHub Actions cron with Telegram notifications. Powers this site's blog.",
+      tech: ["Python", "LangGraph", "Gemini 2.0 Flash", "GitHub Actions"],
+      link: "https://abhay-yadav.vercel.app/blog"
+    },
+    {
+      title: "Recallr",
+      description: "Production-style RAG system in Go with clean separation of concerns across ingestion, embedding, and retrieval layers; Ollama + Gemma with pgvector (IVFFLAT/cosine) for semantic search over personal notes. Exposes JSON HTTP APIs and a Cobra CLI with REPL.",
+      tech: ["Go", "Postgres (pgvector)", "Ollama", "Gemma"],
+      link: "https://github.com/abhayishere/Recallr"
+    },
+    {
+      title: "DBXp",
+      description: "Modular, extensible terminal database explorer in Go supporting PostgreSQL, MySQL, and SQLite, with real-time schema exploration, live SQL preview, query history, CSV export, and safety validation against destructive operations.",
+      tech: ["Go", "Postgres", "MySQL", "SQLite"],
+      link: "https://github.com/abhayishere/DBXp"
+    },
+    {
       title: "SecondBrain",
       description: "Chrome extension with Firebase Authentication, Go-based RESTful API with Firestore, and a React web app.",
       tech: ["React", "Go", "Firebase", "RESTful API"],
@@ -19,24 +37,6 @@ export default function Projects() {
       description: "Online Judge website, similar to Codeforces and LeetCode.",
       tech: ["React", "Node.js", "Docker"],
       link: "https://github.com/abhayishere/Ojay"
-    },
-    {
-      title: "Food Vision Big",
-      description: "Food Vision Big outperforming the original paper's accuracy.",
-      tech: ["Python", "TensorFlow", "Deep Learning"],
-      link: "https://github.com/abhayishere/Food-Vision-Big-beating-the-original"
-    },
-    {
-      title: "Music Player",
-      description: "Music player GUI application using Python Tkinter.",
-      tech: ["Python", "Tkinter", "GUI"],
-      link: "https://github.com/abhayishere/Music-Player-using-Tkinter"
-    },
-    {
-      title: "Chrome Extensions",
-      description: "Some of my chrome extensions.",
-      tech: ["JavaScript", "Chrome API", "HTML/CSS"],
-      link: "https://github.com/abhayishere/Chrome-Extensions-using-JSON-and-APIs"
     }
   ];
 
