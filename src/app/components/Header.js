@@ -50,6 +50,7 @@ export default function Header() {
           <li><Link href="/blog" className="hover:underline">blog</Link></li>
           <li><Link href="/projects" className="hover:underline">projects</Link></li>
           <li><Link href="/experience" className="hover:underline">experience</Link></li>
+          <li><Link href="/open-source" className="hover:underline">open source</Link></li>
           <li><Link href="/music" className="hover:underline">music</Link></li>
         </ul>
       </nav>
