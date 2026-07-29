@@ -8,14 +8,15 @@ export default function Home() {
       <Header />
       <div className="space-y-8 font-mono">
         <p className="text-lg">
-          Hi! I'm Abhay Yadav, a Software Engineer II at HDFC Bank building on the Fund Transfer team.
+          Hi! I'm Abhay Yadav, a Software Engineer I at HDFC Bank building on the Fund Transfer team.
         </p>
 
         <p className="text-lg">
           I work on LLM-powered payments infrastructure — designing MCP servers, RAG systems, and
           event-driven Golang microservices that move money for millions of users. Outside of that,
-          I like building side projects in Go and Python (RAG systems, TUIs, agentic pipelines) and
-          I'm a competitive programming lover.
+          I like building side projects in Go and Python (RAG systems, TUIs, agentic pipelines),
+          contributing to <Link href="/open-source" className="underline hover:text-gray-300">open source</Link>,
+          and I'm a competitive programming lover.
 
           Outside of coding, I enjoy badminton, chess, swimming, listening to music, playing ps5 and travelling.
         </p>
