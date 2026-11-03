@@ -3,6 +3,15 @@ import Header from '../components/Header'
 export default function OpenSource() {
   const contributions = [
     {
+      title: "fix(go): send Gemini system prompts via system_instruction instead of user turn",
+      repo: "infiniflow/ragflow",
+      description: "The Go Gemini driver was dropping messages with the system role and sending the system prompt as a regular user message, so Gemini never treated it as a true system instruction. Fixed the driver to route system-role content through Gemini's native system_instruction field, with unit tests covering the request construction.",
+      tech: ["Go", "Gemini API"],
+      status: "Merged",
+      date: "Jul 2026",
+      link: "https://github.com/infiniflow/ragflow/pull/17449"
+    },
+    {
       title: "fix(go): implement Anthropic streaming (ChatStreamlyWithSender)",
       repo: "infiniflow/ragflow",
       description: "The Go Anthropic driver's ChatStreamlyWithSender was a stub that always returned \"no such method\", so any caller requesting a streamed response from a Claude model via the Go path failed outright. Implemented it by opening the Messages API with stream=true and parsing the SSE response via the shared ParseSSEStream helper, forwarding text_delta/thinking_delta content through the sender callback.",
